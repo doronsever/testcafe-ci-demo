@@ -20,9 +20,11 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
+      - run: npm run start
+
       - run: npm test
 
-      - run: npm run start
+
 
       - store_test_results:
           path: /tmp/test-results
