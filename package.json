@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "testcafe chrome:headless tests/**/* -r xunit:/tmp/test-results/res.xml",
+    "test": "npm run start && testcafe chrome:headless tests/**/* -r xunit:/tmp/test-results/res.xml",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
