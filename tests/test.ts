@@ -1,15 +1,12 @@
 import { Selector } from 'testcafe';
 
 fixture `Getting Started`
-  .page `http://devexpress.github.io/testcafe/example`;
+  .page `http://localhost:4200`;
 
 test('My first test', async t => {
-  await t
-    .typeText('#developer-name', 'John Smith')
-    .click('#submit-button');
-
-  const articleHeader = await Selector('.result-content').find('h1');
+  const articleHeader = await Selector('h2');
 
   // Obtain the text of the article header
-  let headerText = await articleHeader.innerText;
+  const headerText = await articleHeader.innerText;
+  await t.expect(headerText).eql('Resources');
 });
