@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build-prod":  "ng serve --prod --aot",
     "test": "testcafe chrome:headless tests/**/* --app 'npm start' --app-init-delay 10000 -r xunit:/tmp/test-results/res.xml",
     "lint": "ng lint",
     "e2e": "ng e2e"
